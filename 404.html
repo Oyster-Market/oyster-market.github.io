@@ -53,9 +53,9 @@ svg{display:block;flex:none}
 .btn-save:active{transform:scale(.98)}
 .btn-save svg{width:24px;height:24px}
 .save-hint{margin-top:10px;text-align:center;font-size:13px;line-height:1.4;color:var(--faint)}
-.h-ios,.h-and,.h-app{display:none}
-.ios .h-ios,.android .h-and{display:inline}
-.ios .h-gen,.android .h-gen{display:none}
+.h-ios,.h-and,.h-app,.h-desk{display:none}
+.ios .h-ios,.android .h-and,.desk .h-desk{display:inline}
+.ios .h-gen,.android .h-gen,.desk .h-gen{display:none}
 .inapp .h-ios,.inapp .h-and,.inapp .h-gen{display:none}
 .inapp .h-app{display:inline}
 .quick{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:6px;margin-top:22px}
@@ -108,6 +108,10 @@ footer img{width:54px;height:54px}
 .modal.open{display:flex}
 .sheet{position:relative;width:100%;max-width:360px;padding:60px 22px 22px;border-radius:30px;background:var(--bg);border:1px solid var(--line);text-align:center;box-shadow:0 40px 100px rgba(0,0,0,.5)}
 .sheet .qrbox{padding:14px;border-radius:22px;background:#fff}
+[hidden]{display:none!important}
+.seg{display:flex;gap:4px;max-width:290px;margin:0 auto 16px;padding:4px;border-radius:999px;background:rgba(0,0,0,.2);border:1px solid var(--line)}
+.seg button{flex:1;min-height:38px;padding:0 10px;border-radius:999px;font-size:14px;font-weight:500;color:var(--muted)}
+.seg button.on{background:var(--sand);color:var(--bg)}
 .sheet .qrbox img{display:block;width:100%;height:auto}
 .sheet b{display:block;margin-top:18px;font-weight:500;font-size:20px}
 .sheet p{margin-top:4px;font-size:14px;color:var(--muted)}
