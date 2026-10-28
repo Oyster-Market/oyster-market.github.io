@@ -77,15 +77,19 @@ h2{font:italic 500 29px/1.12 var(--serif);color:var(--sand);margin-bottom:12px}
 .copy svg{width:18px;height:18px}
 .wx{text-align:center}
 .wx-qr{display:inline-block;padding:14px;border-radius:22px;background:#fff;box-shadow:0 18px 40px rgba(0,0,0,.25)}
-.wx-qr img{display:block;width:196px;height:196px;-webkit-touch-callout:default;-webkit-user-select:auto;user-select:auto}
+.wx-qr img{display:block;width:220px;height:220px;-webkit-touch-callout:default;-webkit-user-select:auto;user-select:auto}
+.wx-who{margin:-4px 0 14px;font-size:15px;color:var(--muted)}
 .wx-hint{margin:14px auto 0;max-width:330px;font-size:14px;line-height:1.45;color:var(--muted)}
-.wx-hint.in{display:none}
-.wx .wx-hint.in{display:none}
-.wxv .wx-hint.in{display:block}
-.wxv .wx-hint.out{display:none}
+.wx .in,.wx .desk{display:none}
+.wxv .wx .in,.desk .wx .desk{display:block}
+.wxv .wx .out,.desk .wx .out{display:none}
+.wx-steps{list-style:none;counter-reset:w;margin:18px auto 0;max-width:340px;text-align:left}
+.wx-steps li{counter-increment:w;display:flex;gap:12px;align-items:flex-start;padding:6px 0;font-size:14px;line-height:1.45;color:var(--muted)}
+.wx-steps li::before{content:counter(w);flex:none;width:24px;height:24px;border-radius:50%;background:rgba(254,222,169,.16);color:var(--sand);display:flex;align-items:center;justify-content:center;font-size:12px;font-weight:600}
+.wx-btns{display:grid;gap:10px;margin-top:16px}
 .btn-ghost{display:flex;align-items:center;justify-content:center;gap:10px;width:100%;min-height:52px;padding:0 18px;border-radius:999px;border:1px solid rgba(254,222,169,.36);color:var(--sand);font-weight:500;font-size:16px}
 .btn-ghost svg{width:19px;height:19px}
-.wx .btn-ghost{margin-top:16px}
+.wx-btns .btn-ghost{margin-top:0}
 .about p{color:var(--muted)}
 .facts{display:grid;grid-template-columns:1fr 1fr;gap:18px 14px;margin:20px 0 22px}
 .facts dt{font:italic 500 26px/1.1 var(--serif);color:var(--sand)}
@@ -184,11 +188,13 @@ body:has(.lp:not(.off)){overflow:hidden}
 <li><a class="row" href="https://t.me/Theodore_dich" target="_blank" rel="noopener"><span class="ic"><svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21.2 3.6 2.9 10.7c-.8.3-.8 1.4 0 1.7l4.4 1.6 1.7 5.4c.2.7 1 .9 1.5.4l2.5-2.3 4.6 3.4c.6.4 1.4.1 1.5-.6L22.4 4.6c.2-.8-.5-1.3-1.2-1z"/><path d="m7.3 14 10.2-7-7.8 8.3"/></svg></span><span class="t"><span class="k">Telegram</span><span class="v">@Theodore_dich</span></span></a><button class="copy" type="button" data-copy="@Theodore_dich" aria-label="copy"><svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="9" y="9" width="12" height="12" rx="2"/><path d="M5 15H4.5A1.5 1.5 0 0 1 3 13.5v-9A1.5 1.5 0 0 1 4.5 3h9A1.5 1.5 0 0 1 15 4.5V5"/></svg></button></li>
 <li><a class="row" href="https://oyster.market" target="_blank" rel="noopener"><span class="ic"><svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9.5"/><path d="M2.5 12h19M12 2.5a14.5 14.5 0 0 1 3.8 9.5 14.5 14.5 0 0 1-3.8 9.5 14.5 14.5 0 0 1-3.8-9.5A14.5 14.5 0 0 1 12 2.5z"/></svg></span><span class="t"><span class="k">Website</span><span class="v">oyster.market</span></span></a></li>
 <li><a class="row" href="#"><span class="ic"><svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M19.5 10c0 5.6-7.5 11.5-7.5 11.5S4.5 15.6 4.5 10a7.5 7.5 0 0 1 15 0z"/><circle cx="12" cy="10" r="2.7"/></svg></span><span class="t"><span class="k">Address</span><span class="v">Mikhaylovsky proezd 3, bldg 16, Moscow, Russia</span></span></a><button class="copy" type="button" data-copy="Mikhaylovsky proezd 3, bldg 16, Moscow, Russia" aria-label="copy"><svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="9" y="9" width="12" height="12" rx="2"/><path d="M5 15H4.5A1.5 1.5 0 0 1 3 13.5v-9A1.5 1.5 0 0 1 4.5 3h9A1.5 1.5 0 0 1 15 4.5V5"/></svg></button></li></ul></section><section class="block wx" id="wechat">
-<h2>WeChat</h2>
-<a class="wx-qr" href="https://u.wechat.com/kHgDh5kQcYf4OjFnG4oNFII?s=2"><img src="/assets/img/wechat-fedor-tikunov.png?v=e9c6fcda" width="196" height="196" alt="WeChat QR"></a>
-<p class="wx-hint in">Press and hold the code → “Scan QR Code in Image”</p>
-<p class="wx-hint out">Scan the code with WeChat. On this same phone: take a screenshot, then open Scan → Album in WeChat</p>
-<a class="btn-ghost" href="https://u.wechat.com/kHgDh5kQcYf4OjFnG4oNFII?s=2"><svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M16.2 8.6C15.6 5.4 12.4 3 8.6 3 4.4 3 1 5.9 1 9.4c0 2 1.1 3.8 2.8 5l-.7 2.3 2.7-1.4c.9.3 1.9.4 2.8.4"/><path d="M16 9c3.9 0 7 2.6 7 5.8 0 1.8-1 3.4-2.5 4.4l.5 2-2.3-1.2c-.9.3-1.8.4-2.7.4-3.9 0-7-2.6-7-5.7S12.1 9 16 9z"/><circle cx="5.9" cy="7.6" r=".6" fill="currentColor"/><circle cx="11.2" cy="7.6" r=".6" fill="currentColor"/><circle cx="13.6" cy="13.2" r=".6" fill="currentColor"/><circle cx="18.4" cy="13.2" r=".6" fill="currentColor"/></svg>Open in WeChat</a>
+<h2>Add on WeChat</h2><p class="wx-who">Tikunov Fedor</p>
+<div class="wx-qr"><img src="/assets/img/wechat-fedor-tikunov.png?v=e9c6fcda" width="220" height="220" alt="WeChat QR" data-wximg></div>
+<p class="wx-hint in">Press and hold the QR code → “Scan QR Code in Image” → “Add to Contacts”</p>
+<p class="wx-hint desk">Scan the code in WeChat: “+” → “Scan”</p>
+<div class="out"><ol class="wx-steps"><li>Save the QR code to your photos — button below</li><li>Open WeChat → “+” → “Scan” → “Album”</li><li>Pick the saved code — the profile opens, tap “Add to Contacts”</li></ol>
+<div class="wx-btns"><button type="button" class="btn-ghost" data-saveimg="/assets/img/wechat-fedor-tikunov.png?v=e9c6fcda" data-name="WeChat-Fedor-Tikunov.png"><svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3v12M7 10.5 12 15l5-4.5"/><path d="M4.5 17v1.5A2.5 2.5 0 0 0 7 21h10a2.5 2.5 0 0 0 2.5-2.5V17"/></svg>Save QR code</button>
+<a class="btn-ghost" href="weixin://dl/scan"><svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M16.2 8.6C15.6 5.4 12.4 3 8.6 3 4.4 3 1 5.9 1 9.4c0 2 1.1 3.8 2.8 5l-.7 2.3 2.7-1.4c.9.3 1.9.4 2.8.4"/><path d="M16 9c3.9 0 7 2.6 7 5.8 0 1.8-1 3.4-2.5 4.4l.5 2-2.3-1.2c-.9.3-1.8.4-2.7.4-3.9 0-7-2.6-7-5.7S12.1 9 16 9z"/><circle cx="5.9" cy="7.6" r=".6" fill="currentColor"/><circle cx="11.2" cy="7.6" r=".6" fill="currentColor"/><circle cx="13.6" cy="13.2" r=".6" fill="currentColor"/><circle cx="18.4" cy="13.2" r=".6" fill="currentColor"/></svg>Open WeChat scanner</a></div></div>
 </section><section class="block about">
 <h2>About the company</h2>
 <p>Oyster Market supplies live oysters, crabs, sea urchins, caviar and fish. Since 2013 we have been serving Moscow restaurants and private clients, with fresh deliveries every week.</p>
@@ -207,7 +213,7 @@ body:has(.lp:not(.off)){overflow:hidden}
 <ol><li>Tap “···” in the top-right corner</li><li>Choose “Open in Browser” (iPhone: “Open in Safari”)</li><li>Tap “Save contact” again in the browser</li></ol><p class="alt">Or add us on WeChat right here: press and hold the WeChat QR code.</p><a class="btn-ghost" href="#wechat" data-close><svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M16.2 8.6C15.6 5.4 12.4 3 8.6 3 4.4 3 1 5.9 1 9.4c0 2 1.1 3.8 2.8 5l-.7 2.3 2.7-1.4c.9.3 1.9.4 2.8.4"/><path d="M16 9c3.9 0 7 2.6 7 5.8 0 1.8-1 3.4-2.5 4.4l.5 2-2.3-1.2c-.9.3-1.8.4-2.7.4-3.9 0-7-2.6-7-5.7S12.1 9 16 9z"/><circle cx="5.9" cy="7.6" r=".6" fill="currentColor"/><circle cx="11.2" cy="7.6" r=".6" fill="currentColor"/><circle cx="13.6" cy="13.2" r=".6" fill="currentColor"/><circle cx="18.4" cy="13.2" r=".6" fill="currentColor"/></svg>Go to WeChat QR code</a>
 <button class="btn-save" type="button" data-close>Got it</button></div></div>
 <div class="toast" id="toast" role="status" aria-live="polite"></div>
-<script>var COPIED="Copied";(function(){var d=document,h=d.documentElement,ua=navigator.userAgent||"";
+<script>var COPIED="Copied",SAVED="Saved";(function(){var d=document,h=d.documentElement,ua=navigator.userAgent||"";
 var ios=/iP(hone|ad|od)/i.test(ua)||(/Macintosh/.test(ua)&&"ontouchend" in d);
 var wx=/MicroMessenger/i.test(ua),android=!ios&&/Android|OpenHarmony|HarmonyOS/i.test(ua),mobile=ios||android||/Mobile/i.test(ua);
 var cnApp=wx||/wxwork|AlipayClient|AliApp|DingTalk|Weibo|__weibo__|\bQQ\/|Lark|Feishu|aweme|BytedanceWebview|NewsArticle|xhsdiscover|baiduboxapp|Kwai/i.test(ua);
@@ -231,6 +237,12 @@ if(iosWeb&&!cnApp){location.href="x-safari-"+a.href;setTimeout(function(){if(d.v
 open("#ov")})});
 qa("[data-inapp]").forEach(function(b){b.addEventListener("click",function(){open("#ov")})});
 qa("[data-qr]").forEach(function(b){b.addEventListener("click",function(){openQr("c")})});
+qa("[data-saveimg]").forEach(function(b){var url=b.getAttribute("data-saveimg"),name=b.getAttribute("data-name"),file=null,blob=null;
+if(window.fetch)fetch(url).then(function(r){return r.blob()}).then(function(x){blob=x;try{file=new File([x],name,{type:"image/png"})}catch(e){}}).catch(function(){});
+b.addEventListener("click",function(){
+if(file&&navigator.canShare&&navigator.canShare({files:[file]})){navigator.share({files:[file]}).catch(function(){});return}
+if(blob&&!ios){var a=d.createElement("a");a.href=URL.createObjectURL(blob);a.download=name;d.body.appendChild(a);a.click();setTimeout(function(){URL.revokeObjectURL(a.href);a.remove()},4000);toast(SAVED);return}
+window.open(url,"_blank")})});
 qa(".modal,.ov").forEach(function(m){m.addEventListener("click",function(e){var t=e.target;if(t===m||(t.closest&&t.closest("[data-close]")))m.classList.remove("open")})});
 qa("[data-share]").forEach(function(b){b.addEventListener("click",function(){var u=b.getAttribute("data-share");if(navigator.share&&!inapp){navigator.share({title:d.title,url:u}).catch(function(){})}else copy(u)})});
 var lp=q("#lp");if(lp){var ll=((navigator.languages&&navigator.languages[0])||navigator.language||"").toLowerCase();
